@@ -13,6 +13,7 @@ class Main {
     node1.addLast(arr);
     System.out.println(node1);
     System.out.println(node1.multiply());
+    System.out.println(node1.multiply2());
 
   }
 
@@ -82,6 +83,18 @@ class Node {
     if (this.next == null)
       return this.value;
     return this.value * this.next.multiply();
+
+  }
+
+  public int multiply2() {
+    int mul = 1;
+    Node current = this;
+    do {
+      mul = mul * current.value;
+      current = current.next;
+    } while (current != null);
+
+    return mul;
 
   }
 
