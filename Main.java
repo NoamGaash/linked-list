@@ -15,6 +15,8 @@ class Main {
     System.out.println(node1.multiply());
     System.out.println(node1.multiply2());
 
+    System.out.println(node1.addFirst(0).addFirst(-1).addFirst(-2));
+
   }
 
 }
@@ -98,4 +100,8 @@ class Node {
 
   }
 
+  public Node addFirst(int num) {
+    Node newNode = new Node(num, this);
+    return newNode;
+  }
 }
